@@ -95,10 +95,10 @@ foreach ($relations as $alias => $details):
 <?php
 			foreach ($details['fields'] as $field) {
                 if ($field!='id'&&$field!=$singularVar.'_id')
-				echo "\t\t\t\t<th><?php __('" . Inflector::humanize($field) . "'); ?></th>\n";
+				echo "\t\t\t\t<th><?php echo __('" . Inflector::humanize($field) . "'); ?></th>\n";
 			}
 ?>
-    		    <th><?php echo "<?php __('Actions');?>";?></th>
+    		    <th><?php echo "<?php echo __('Actions');?>";?></th>
 	        </tr>
 <?php
         echo "\t\t\t<?php foreach (\${$singularVar}['{$alias}'] as \${$otherSingularVar}) { ?>\n";
