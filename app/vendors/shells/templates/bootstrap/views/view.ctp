@@ -14,14 +14,14 @@ foreach ($fields as $field) {
 		foreach ($associations['belongsTo'] as $alias => $details) {
 			if ($field === $details['foreignKey']) {
 				$isKey = true;
-				echo "\t\t\t<dt><?php __('" . Inflector::humanize(Inflector::underscore($alias)) . "'); ?></dt>\n";
+				echo "\t\t\t<dt><?php echo __('" . Inflector::humanize(Inflector::underscore($alias)) . "'); ?></dt>\n";
 				echo "\t\t\t<dd><?php echo \$this->Html->link(\${$singularVar}['{$alias}']['{$details['displayField']}'], array('controller' => '{$details['controller']}', 'action' => 'view', \${$singularVar}['{$alias}']['{$details['primaryKey']}'])); ?></dd>\n";
 				break;
 			}
 		}
 	}
 	if ($isKey !== true) {
-		echo "\t\t\t<dt><?php __('" . Inflector::humanize($field) . "'); ?></dt>\n";
+		echo "\t\t\t<dt><?php echo __('" . Inflector::humanize($field) . "'); ?></dt>\n";
         if ($field=='created'||$field=='updated'||$field=='modified') {
             echo "\t\t\t<dd><?php echo \$time->format('d/m/Y',\${$singularVar}['{$modelClass}']['{$field}']); ?></dd>\n";
         } else {
