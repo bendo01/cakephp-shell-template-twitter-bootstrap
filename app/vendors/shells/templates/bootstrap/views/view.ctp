@@ -5,7 +5,7 @@
 <?php echo "?>\n"; ?>
 <div class="row">
 	<div class="span16 columns">
-        <h1><?php echo "<?php  __('{$singularHumanName}');?>";?></h1>
+        <h1><?php echo "<?php echo __('{$singularHumanName}');?>";?></h1>
     	<dl>
 <?php
 foreach ($fields as $field) {
