@@ -35,7 +35,7 @@ foreach ($fields as $field) {
 <?php
 	echo "\t\t\t<?php echo \$this->Html->link(__('Edit " . $singularHumanName ."', true), array('action' => 'edit', \${$singularVar}['{$modelClass}']['{$primaryKey}']),array('class'=>'btn')); ?>\n";
 	echo "\t\t\t<?php echo \$this->Html->link(__('Delete " . $singularHumanName . "', true), array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class'=>'btn danger'), sprintf(__('Estas seguro que quieres borrar el # %s?', true), \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
-	echo "\t\t\t<?php echo \$this->Html->link(__('Lista " . $pluralHumanName . "', true), array('action' => 'index'),array('class'=>'btn')); ?>\n";
+	echo "\t\t\t<?php echo \$this->Html->link(__('List " . $pluralHumanName . "', true), array('action' => 'index'),array('class'=>'btn')); ?>\n";
 	echo "\t\t\t<?php echo \$this->Html->link(__('New " . $singularHumanName . "', true), array('action' => 'add'),array('class'=>'btn primary')); ?>\n";
 
 	$done = array();
