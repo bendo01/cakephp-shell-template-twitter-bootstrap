@@ -23,7 +23,7 @@ foreach ($fields as $field) {
 	if ($isKey !== true) {
 		echo "\t\t\t<dt><?php echo __('" . Inflector::humanize($field) . "'); ?></dt>\n";
         if ($field=='created'||$field=='updated'||$field=='modified') {
-            echo "\t\t\t<dd><?php echo \$time->format('d/m/Y',\${$singularVar}['{$modelClass}']['{$field}']); ?></dd>\n";
+            echo "\t\t\t<dd><?php echo \$this->Time->format('d/m/Y',\${$singularVar}['{$modelClass}']['{$field}']); ?></dd>\n";
         } else {
             echo "\t\t\t<dd><?php echo \${$singularVar}['{$modelClass}']['{$field}']; ?></dd>\n";
         }
